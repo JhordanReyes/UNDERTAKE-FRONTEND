@@ -1,0 +1,29 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    padding: 1rem;
+    width: 100%;
+    max-width: 30rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.login-link {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+}
+
+@media (min-width: 900px) {
+    .login {
+        justify-content: space-between;
+    }
+    .login-form {
+        margin: auto;
+    }
+}

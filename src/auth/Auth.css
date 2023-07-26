@@ -1,0 +1,14 @@
+.auth-image{
+    display: none;
+    width: 50%;
+    height: 100vh;
+    background-image: url("./../assets/imageAuth.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 900px) {
+    .auth-image {
+        display: block;
+    }
+}

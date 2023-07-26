@@ -1,0 +1,13 @@
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-weight: 00;
+}
+
+.pageError {
+    font-size: 5rem;
+    font-weight: 600;
+}
