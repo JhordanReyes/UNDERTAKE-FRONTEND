@@ -4,7 +4,7 @@ import { removeLocalStorage, saveLocalStorageObject } from "../../utilities";
 
 export const EmptyUserState: User = {
     id: 0,
-    name: "",
+    userName: "",
     email: "",
     password: ""
 }

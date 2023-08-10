@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { useDispatch } from 'react-redux';
 import { createUser } from '../../../redux/slices/userSlice';
 import "../../Auth.css";
+import { AlertIncompleteFields } from '../../../components/Alerts/Alerts';
 
 export type LoginProps = {
 }
@@ -30,7 +31,7 @@ const Login: React.FC<LoginProps> = ({ }) => {
 	const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 		if (userForm.email === "" || userForm.password === "") {
-			Swal.fire("Campos Incompletos","Todos los campos son requeridos.","warning")
+			AlertIncompleteFields();
 			return
 		}
 		dispatch(createUser(userForm))

@@ -3,9 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-clear);
     color: var(--text-color);
     transition: 0.3s;
+    border-bottom: 0.1px solid var(--line-color);
 }
 
 .icon {
@@ -30,9 +31,10 @@
     width: 100%;
     top: 0;
     left: 100%;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-clear);
     height: 100vh;
     transition: 0.3s;
+    z-index: 100;
 }
 
 .navBarIsVisible {

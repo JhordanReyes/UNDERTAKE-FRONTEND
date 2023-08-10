@@ -1,0 +1,1 @@
+export { default as ModalDashboard } from './ModalDashboard';
