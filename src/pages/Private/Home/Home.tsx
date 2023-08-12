@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import { User } from '../../../models';
-import { getUsers } from '../../../services';
+import { getProducts, getUsers } from '../../../services';
 import { Products } from './components/Products';
+import { Product } from '../../../models/Product';
 
 export type HomeProps = {
 }
 
 const Home: React.FC<HomeProps> = ({ }) => {
 
-	const [users, setUsers] = useState<User[]>([])
+	const [products, setProducts] = useState<Product[]>([])
 
 	const findAll = async () => {
-		const data = await getUsers();
-		setUsers(data)
+		const data = await getProducts();
+		setProducts(data);
 	}
 
 	useEffect(() => {
@@ -23,8 +23,8 @@ const Home: React.FC<HomeProps> = ({ }) => {
 
 	return (
 		<div className='main'>
-			<h2>Productos</h2>
-			<Products />
+			<h2>Home</h2>
+			<Products products={products} />
 		</div>
 	)
 };

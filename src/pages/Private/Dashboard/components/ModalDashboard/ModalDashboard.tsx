@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ModalDashboard.css';
 import Modal from '@mui/material/Modal';
 import { Product } from '../../../../../models/Product';
@@ -15,7 +15,7 @@ export type ModalDashboardProps = {
 
 const ModalDashboard: React.FC<ModalDashboardProps> = ({ open, handleClose, updateTableProducts, product, setProduct }) => {
 
-	const onSubmit = async(event: React.FormEvent<HTMLFormElement>) => {
+	const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		if (product.name === "" || product.description === "", product.price === 0) {
 			AlertIncompleteFields();
@@ -24,7 +24,9 @@ const ModalDashboard: React.FC<ModalDashboardProps> = ({ open, handleClose, upda
 		product.id === 0 ? await addProduct(product) : await updateProduct(product);
 		updateTableProducts();
 		handleClose();
-		AlertSucces("Agregado correctamente", "Se agregó un producto a la Tabla.");
+		product.id === 0
+			? AlertSucces("Agregado correctamente", "Se agregó un producto a la Tabla.")
+			: AlertSucces("Actualizado correctamente", "Se actualizó un producto.");
 	}
 
 	const onChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {

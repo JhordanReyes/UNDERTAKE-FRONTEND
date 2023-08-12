@@ -10,3 +10,21 @@
     align-items: center;
     justify-content: center;
 }
+
+.grafico {
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+}
+.grafico-container {
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .grafico-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+    }
+}

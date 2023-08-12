@@ -46,13 +46,20 @@ const NavBar: React.FC<NavBarProps> = ({ }) => {
 				></i>
 				<div>
 					<Link
+						className='flex-center'
 						to={PrivateRoutes.HOME}
 						onClick={handleNavBar}
-					>Home</Link>
+					><i className='bx bxs-home'></i>Home</Link>
 					<Link
+						className='flex-center'
+						to={PrivateRoutes.CONTACTS}
+						onClick={handleNavBar}
+					><i className='bx bxs-user'></i> Contacts</Link>
+					<Link
+						className='flex-center'
 						onClick={handleNavBar}
 						to={PrivateRoutes.DASHBOARD}
-					>Dashboard</Link>
+					><i className='bx bxs-dashboard'></i>Dashboard</Link>
 					<i
 						onClick={() => handleDarkMode()}
 						className={`bx bxs-${darkMode ? "sun" : "moon"} icon`}
@@ -63,11 +70,17 @@ const NavBar: React.FC<NavBarProps> = ({ }) => {
 			{/* NAVBAR DESKTOP */}
 			<nav className='navbar-desktop' id='navbar-desktop'>
 				<Link
+					className='flex-center'
 					to={PrivateRoutes.HOME}
-				>Home</Link>
+				><i className='bx bxs-home'></i>Home</Link>
 				<Link
+					className='flex-center'
+					to={PrivateRoutes.CONTACTS}
+				><i className='bx bxs-user'></i> Contacts</Link>
+				<Link
+					className='flex-center'
 					to={PrivateRoutes.DASHBOARD}
-				>Dashboard</Link>
+				><i className='bx bxs-dashboard'></i>Dashboard</Link>
 				<Logout />
 				<i
 					onClick={() => handleDarkMode()}

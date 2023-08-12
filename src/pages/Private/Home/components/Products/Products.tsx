@@ -9,7 +9,9 @@ export type ProductsProps = {
 const Products: React.FC<ProductsProps>  = ({products}) => {
 	return (
 		<div className='products'>
-
+			{
+				products.map(product => <p>{product.id} - {product.name}</p>)
+			}
 		</div>
 	)
 };
